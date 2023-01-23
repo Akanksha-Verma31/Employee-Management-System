@@ -8,7 +8,7 @@ import { connectToDatabase } from "./database";
 dotenv.config();
  
 const { ATLAS_URI } = process.env;
- 
+const PORT = process.env.PORT || 3030;
 if (!ATLAS_URI) {
    console.error("No ATLAS_URI environment variable has been defined in config.env");
    process.exit(1);
@@ -21,8 +21,8 @@ connectToDatabase(ATLAS_URI)
  
        // start the Express server
        app.use("/employees", employeeRouter);
-       app.listen(5200, () => {
-           console.log(`Server running at http://localhost:5200...`);
+       app.listen(PORT, () => {
+           console.log(`Server running at ${PORT}`);
        });
  
    })
