@@ -9,7 +9,7 @@ We'll be building an employee management web application. The interface will hav
 - Add new employees
 - Update existing employees
 
-Here's what our finished application looks like:
+Here's what the finished application looks like:
 
 ![Demonstration of the web application](demo.gif)
 
